@@ -5,10 +5,18 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 const name = 'Petrishchev Evgeniy';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+
+const Layout = ({
+  children,
+  home
+} : {
+  children: React.ReactElement | React.ReactElement[],
+  home?: boolean
+}) => {
     return (
     <div className={styles.container}>
       <Head>
@@ -68,3 +76,5 @@ export default function Layout({ children, home }) {
     </div>
   );
 }
+
+export default Layout;
